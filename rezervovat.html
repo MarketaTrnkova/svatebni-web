@@ -1,0 +1,40 @@
+---
+layout: hlavicka-paticka.njk
+title: Rezervovat dar
+---
+    <section class="rezervace-sekce">
+        <div class="decoration decoration--top-left">
+            <img src="/images/růže horní.png" alt="svatební dekorace">
+        </div>
+        <h1 class="section__title">Rezervovat dar</h1>
+        <div class="rezervace-sekce__img">
+            <img alt="dar" id="imgDaru">
+        </div>
+        <form class="rezervace__formular">
+            <label for="jmeno">Jméno</label>
+            <input class="input" type="text" name="jmeno" id="jmeno">
+            <label for="email">Email</label>
+            <input class="input" type="email" name="email" id="email">
+            <a href="/dekujeme-za-rezervaci/" class="form-btn">Rezervovat</a>
+        </form>
+    </section>
+    <section class="rezervace-sekce">
+        <div class="info-blok">
+            <h3 class="info-blok__title">Jak rezervace funguje?</h3>
+            <p class="info-blok__text">Po kliknutí na tlačítko odeslat Vám bude zaslán email s potvrzením rezervace. Pokud budete chtít rezervaci zrušit, tak v emailu najdete odkaz pro zrušení rezervace - z toho důvodu doporučujem email nemazat :)</p>
+        </div>
+    </section>
+    <div class="decoration decoration--bottom-right">
+        <img src="/images/růže dolní.png" alt="">
+    </div>
+
+    <script>
+        let urlParametr = new URLSearchParams(window.location.search);
+        let nazevDaru = urlParametr.get('dar');
+    
+        if (nazevDaru) {
+            let srcDaru = `/images/dary/dar-${nazevDaru}.png`;
+            let imgElementDaru = document.getElementById("imgDaru");
+            imgElementDaru.src = srcDaru;
+        }
+    </script>

@@ -1,0 +1,1089 @@
+
+
+/**** BARVY ****/
+$light-green:#ECEEC5;
+$dark-green: #69904C;
+$dark-green-hover:#506e39;
+$light-green-hover:rgb(244, 246, 199);
+$cta-green: #C3D2B8;
+$widget-background-color: #ECEEC5E5;
+$footer-background-color: #ECEEC566;
+$pink: #FDE3ED66;
+
+
+/**** PISMO ****/
+$font-family-text: 'Poppins', sans-serif;
+$font-family-menu: 'Montaga', serif;
+$font-weight-title: 800;
+$font-weight-text: 300;
+$homepage-title: 96px;
+$main-title-size: 48px;
+$main-subtitle-size: 36px;
+$text-font-size: 24px;
+$small-text-font-size: 20px;
+
+/**** VELIKOSTI ****/
+$section-padding: 70px;
+$widgets-paddding: 40px;
+$vyska-hlavicky: 95px;
+$velikost-hamburger-menu: 35px;
+
+/* scrollovani na kotvy - odecteni vysky hlavicky */
+#uvod, #harmonogram, #mista, #dary{
+    scroll-margin-top: $vyska-hlavicky - 23px;
+}
+
+
+*{ 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $font-family-text;
+}
+
+
+html {
+    scroll-behavior: smooth;
+  }
+
+h1{
+    font-size: $homepage-title;
+    font-weight: $font-weight-title;
+    text-align: center;
+}
+h2{
+    font-size: $main-title-size;
+    font-weight: $font-weight-title;
+    text-align: center;
+    padding-top: $section-padding;
+}
+h3{
+    color: $dark-green;
+}
+
+
+
+/* HLAVICKA */
+
+.header{
+    padding: 20px;
+    font-size: $text-font-size;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: white;
+    z-index: 990;
+    height: $vyska-hlavicky;
+}
+
+.header__menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__menu--mobile{
+    display: none;
+}
+
+.header__logo .menu__link{
+    color: $dark-green;
+    font-weight: $font-weight-title;
+}
+
+.menu__list{
+    display: flex;
+    list-style: none;
+    justify-content: right;
+    align-items: center;
+}
+.menu__link--main{
+    padding: 22px;
+    text-decoration: none;
+    font-family: $font-family-menu;
+    color: black;
+
+}
+.menu__link--main{
+    transition: 0.1s;
+
+    &:hover{
+        color: $dark-green;
+        font-weight: $font-weight-title;
+    }
+    &:active, &:focus{
+        color: $dark-green;
+        font-weight: $font-weight-title;
+    }
+
+}
+
+
+.header__logo .menu__link{
+    justify-self: left;
+    font-family: $font-family-text;
+    text-decoration: none;
+}
+.menu__cta-potvrzeni-ucasti{
+    padding: 10px;
+    position: relative;
+}
+
+.menu__cta-potvrzeni-ucasti .menu__link{
+    background-color: $cta-green;
+    font-weight: $font-weight-title;
+    font-family: $font-family-text;
+    border-radius: 10px;
+    margin-left: 20px;
+    color: $dark-green;
+    padding: 10px 30px;
+    text-decoration: none;
+
+    &:hover {
+        color: $cta-green;
+        background-color: $dark-green
+    }
+}
+
+/* MoBILNÍ MENU */
+
+.header__menu--mobile .header__logo{
+    line-height: $velikost-hamburger-menu;
+    padding: 10px;
+}
+
+.header__menu--mobile{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.hamburger-menu{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+}
+.hamburger-icon{
+    text-align: right;
+    font-size: $velikost-hamburger-menu;
+    padding-right: 20px;
+    color: $dark-green;
+
+}
+
+
+.menu__list--mobile{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    width: 100vw;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.menu__list--mobile .menu__item{
+padding-bottom: 20px;
+}
+
+.hide{
+    display: none;
+}
+.show{
+    display: flex;
+}
+
+
+/* HOMEPAGE */
+
+.homepage__picture-wrapper{
+    width: 100%;
+    height: calc(100vh - ($vyska-hlavicky - 23px));
+    background-image: url(../images/home-picture.png);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+   margin-top: $vyska-hlavicky;
+}
+.homepage-subtitle{
+    padding-top: 20px;
+}
+.picture__widgets-wapper{
+    display: flex;
+    gap: 25px;
+}
+.widget{
+    width: 195px;
+    height: 195px;
+    border-radius: 50%;
+    background-color: $widget-background-color;
+    margin: 40px 0px;
+    position: relative;
+}
+.widget__odpocitavadlo{
+position: absolute;
+top:25%;
+left: 50%;
+transform: translateX(-50%);
+font-size: 64px;
+font-weight: $font-weight-title;
+color: $dark-green;
+}
+
+.picture__add-info{
+    text-transform: uppercase;
+    font-weight: $font-weight-text;
+    font-size: $main-subtitle-size;
+    text-align: center;
+}
+
+
+/* homepage  sekce widgety */
+
+.decoration{
+    position: relative;
+    width: 100%;
+}
+.decoration img{
+    position: absolute;
+}
+
+.decoration--bottom-right img{
+    bottom: 0;
+    right: 0;
+}
+.decoration--top-left img{
+    top: -3px;
+    left: 0;
+}
+
+
+.basic-widget-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.basic-widget-info__widget-wrapper{
+    display: flex;
+    flex-direction: row;
+    padding: $section-padding;
+    gap: 40px;
+    justify-content: center;
+    align-items: stretch;
+}
+.basic-widget-info__widget--dulezita-mista{
+    padding: $widgets-paddding;
+}
+
+.basic-widget-info__widget--dulezita-mista .basic-widget-info__widget{
+    width: 400px;
+}
+
+.basic-widget-info__widget{
+    background-color: $light-green;
+    border-radius: 10px;
+    padding: $widgets-paddding 70px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.widget__cas, .widget__misto{
+    font-size: $text-font-size;
+    display: flex;
+}
+
+.basic-widget-info__widget i{
+    padding: 5px 20px 20px 0px;
+    font-size: $text-font-size;
+    color: $dark-green;
+}
+.basic-widget-info__widget h4{
+    font-size: $text-font-size + 4px;
+    font-weight: $font-weight-text;
+    padding-bottom: 20px;
+}
+
+.basic-widget-info__btn-wrapper{
+    width: auto;
+    margin: auto;
+    margin-bottom: 70px;
+}
+
+.basic-widget-info__btn{
+    padding: 20px 60px;
+    border-radius: 10px;
+    background-color: $dark-green;
+    color: white;
+    text-decoration: none;
+    font-size: $text-font-size;
+
+    &:hover{
+        background-color: $dark-green-hover;
+    }
+}
+
+/* HARMONOGRAM */
+
+.harmonogram-section{
+    background-color: $pink;
+}
+
+.section__title{
+    color: $dark-green;
+    width: 100%;
+    font-size: $main-title-size;
+    font-weight: $font-weight-title;
+    padding: $section-padding;
+}
+
+.timeline{
+    padding: $widgets-paddding 0px;
+    margin: auto;
+    max-width: 34.15em;
+}
+.timeline i{
+    color: $dark-green;
+    padding-right: 0.5em;
+}
+
+.timeline__checkpoint{
+    max-width: 34em;
+    position: relative;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.checkpoint__content{
+/*     border: 2px solid $light-green; */
+    background-color: $light-green;
+    border-radius: 1em;
+    padding: 1.5em;
+    text-align: center;
+}
+
+.checkpoint__title{
+    margin-bottom: 0.5em;
+    text-align: center;
+    color: $dark-green;
+}
+
+.title__time{
+    color: $dark-green;
+    padding-right: 0.5em;
+
+}
+
+.checkpoint p{
+    line-height: 27px;
+}
+
+/* sude checkpointy */
+.timeline__checkpoint:nth-child(odd){
+    border-left: 5px solid $light-green;
+    padding-left: 3em;
+    transform: translateX(17em);
+}
+
+/* liche checkpointy */
+.timeline__checkpoint:nth-child(even){
+    border-right: 5px solid $light-green;
+    padding-right: 3em;
+    transform: translateX(-16.7em);
+}
+
+.timeline__checkpoint:nth-child(odd)::before,
+.timeline__checkpoint:nth-child(even)::before{
+    content: "";
+    background-color: $dark-green;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+.timeline__checkpoint:nth-child(odd)::before{
+    left: -0.65em;
+}
+.timeline__checkpoint:nth-child(even)::before{
+    right: -0.65em;
+}
+
+/* DULEZITA MISTA */
+
+.basic-widget__mapa{
+    border-radius: 10px;
+}
+.dulezita-mista__info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin:$widgets-paddding auto;
+    padding-bottom: $section-padding;
+    text-align: center;
+}
+
+/* DARY */
+.dary{
+    padding: $section-padding;
+    padding-top: 0;
+    background-color: $pink;
+    margin: auto;
+    width: 100%;
+
+}
+
+.dary__text-wrapper{
+    margin: auto;
+    text-align: center;
+    max-width: 900px;
+
+}
+
+.dary__container{
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-content: center;
+} 
+
+.dary__qr-platba-wrapper{
+display: flex;
+flex-direction: row;
+gap: $widgets-paddding;
+padding: $widgets-paddding;
+margin: $section-padding auto;
+background-color: $light-green;
+border-radius: 10px;
+text-align: center;
+width: auto;
+align-items: center;
+align-content: center;
+justify-content: center;
+}
+
+.dary__qr-kod img{
+    border-radius: 10px;
+}
+
+.qr-popis__title{
+    font-size: $text-font-size;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.dary__seznam{
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    grid-column-gap: 40px;
+    grid-row-gap: 60px;
+    justify-items: center;
+    width: 100%;
+    justify-content:center
+}
+
+.dar__nazev, .dar__cena{
+    text-align: center;
+}
+
+.dar__img{
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+.dar__img i{
+    position: absolute;
+    font-size: 24px;
+    color: black;
+    top:20px;
+    right: 20px;
+    display: none;
+    transition: all 0.3s ease-in;
+
+
+    border-radius: 50%;
+}
+
+.dar__img:hover img{
+    transform: scale(1.07); 
+}
+.dar__img:hover i{
+    display: flex;
+}
+.dar__img img{
+    object-fit: cover;
+    transition: all 0.3s ease-in;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.dar__btn{
+    padding: 10px 0px;
+    background-color: $dark-green;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px 0px;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+.dar__btn--prohlednout{
+  background-color: $light-green;
+
+
+    &:hover{
+        background-color: $light-green-hover;
+}
+}
+
+.dar__btn--rezervovat:hover{
+        background-color: $dark-green-hover;
+        color: white;
+}
+
+/* PATIČKA */
+.footer{
+    display: flex;
+    flex-direction: column;
+    padding: $section-padding;
+    background-color: $footer-background-color;
+}
+.footer__jmena-snoubencu-heading{
+    color: $dark-green;
+    font-weight: $font-weight-title;
+    font-size: $main-subtitle-size;
+    text-align: center;
+}
+.footer__datum-svatby{
+    font-weight: $font-weight-text;
+    font-size: $text-font-size;
+    text-align: center;
+}
+.footer__contact-widgets{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    font-size: $main-title-size;
+    padding: 40px;
+}
+.footer__contact-widgets p{
+    margin-top: 10px;
+    font-size: $text-font-size / 1.4;
+    color: $dark-green;
+}
+.footer__contact-widgets i{
+    padding: 20px 120px;
+    background-color: white;
+    border-radius: 10px;
+    color: $dark-green;
+}
+
+.contact-widgets__tel, .contact-widgets__email{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $light-green;
+    padding: $widgets-paddding - 10px;
+    border-radius: 10px;
+}
+
+
+.footer__copyright{
+    text-align: center;
+}
+
+/* REZERVACE */
+
+.rezervace-sekce h1{
+    margin-top: $vyska-hlavicky - 23px;
+}
+
+
+.rezervace-sekce__img{
+    width: 400px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.rezervace-sekce__img img{
+    object-fit: cover;
+}
+.rezervace__formular{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    margin: auto;
+}
+
+.input{
+    padding:8px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(192, 192, 192);
+
+     &:active, &:focus{
+        border: 2px solid rgb(192, 192, 192);
+        outline: none;
+    }
+}
+
+.form-btn{
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: $dark-green;
+    border: none;
+    color: white;
+    font-size: $small-text-font-size;
+    text-decoration: none;
+    text-align: center;
+
+
+    &:hover{
+        background-color: $dark-green-hover;
+    }
+}
+
+.rezervace-sekce{
+    width: 100%;
+    margin: auto;
+}
+.rezervace__formular{
+    padding-top: $section-padding;
+    padding-bottom: $widgets-paddding;
+    width: 600px;
+}
+
+.info-blok{
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: $widgets-paddding;
+    background-color: $light-green;
+    border-radius: 10px;
+    margin-bottom: $section-padding;
+}
+.info-blok__title{
+    padding-bottom: $widgets-paddding;
+    font-size: $text-font-size;
+}
+
+.info-blok__text, .info-blok__title{
+    text-align: center;
+    color: black;
+}
+
+/* DEKUJEME STRANKY */
+
+.dekujeme-text__wrapper{
+    max-width: 900px;
+    margin: auto;
+}
+.dekujeme-text__obsah{
+    text-align: center;
+}
+
+.kontaktni-info{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.kontaktni-info i{
+    font-size: $main-subtitle-size;
+    padding-bottom: 20px;
+    color: black;
+}
+.kontaktni-info .fa-envelope{
+    font-size:  $main-subtitle-size + 10px;
+}
+
+.kontakt-tel, .kontakt-email{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: $light-green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.dekujeme-sekce{
+    position:relative;
+    margin-bottom: $section-padding;
+    z-index: 800;
+    margin-top: $vyska-hlavicky - 23px;
+}
+
+.dekujeme-sekce .decoration--bottom-right{
+    bottom: -$section-padding;
+}
+
+/****** POTVRZENI UCASTI *****/
+.potvrzeni-ucasti__section{
+    position: relative;
+    margin-top: $vyska-hlavicky - 23px;
+}
+
+.potvrzeni-ucasti__formular{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 800px;
+    margin: auto;
+    padding: $widgets-paddding;
+    border:  1px solid rgba(192, 192, 192, 0.39);
+    border-radius: 10px;
+    box-shadow: 0.5px 0.5px 8px -2px rgba(0, 0, 0, 0.183);
+    margin-bottom: $section-padding;
+    
+}
+.radio-btn__polozka{
+display: flex;
+justify-content: left;
+align-items: center;
+padding-bottom: 5px;
+}
+
+.form-text{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.radio-input{
+    padding: 15px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.input__alergie{
+    margin-top: 10px;
+}
+
+.potvrdit-ucast-btn-wrapper{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+@media only screen and (min-width:1241px){
+    .header__menu--mobile{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width:1240px) {
+    $vyska-hlavicky: 60px;
+
+    .section__title{
+        z-index: 900;
+    }
+    .decoration img{
+        z-index: 850;
+    }
+    .decoration img{
+        width: 22%;
+    }
+    .section__title{
+        font-size: 45px;
+    }
+    .header__menu{
+        display: none;
+    }
+    .picture__widgets-wapper{
+        gap: 20px;
+    }
+
+    .menu__cta-potvrzeni-ucasti, .menu__cta-potvrzeni-ucasti .menu__link{
+        margin:auto;
+        padding: 5px;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .harmonogram-section .section__title{
+        padding-bottom: 0px;
+    }
+    .dulezita-mista__info{
+        width: 90%;
+    }
+    .basic-widget-info__widget-wrapper{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: $widgets-paddding - 10px;
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+
+
+    .widget__cas, .widget__misto, .basic-widget-info__btn{
+        font-size: 18px;
+        justify-content: center;
+
+    }
+    .basic-widget-info__widget{
+        width: 90%;
+    }
+    .basic-widget-info__widget h4{
+        padding-top: 20px;
+        font-size: 20px;
+    }
+    .basic-widget-info__widget i{
+        padding: 5px 5px 10px 0px;
+        font-size: $text-font-size;
+        color: $dark-green;
+    }
+
+    .dary__seznam{
+        display: grid;
+        grid-template-columns: 40% 40% ;
+        grid-column-gap: 20px;
+        grid-row-gap: 40px;
+    }
+
+    .dary{
+        padding: 0px 20px 20px 20px;   
+    }
+    
+    .dary__text-wrapper{
+        margin: auto;
+        text-align: center;
+        max-width: 900px;
+    
+    }
+
+    .dary__qr-platba-wrapper{
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 10px;
+        margin: 40px auto;
+        width: 80%;
+    }
+
+    .section__title{
+        padding: $widgets-paddding;
+    }
+    .timeline {
+        width: 80vw;
+        padding-top: 0px;
+    }
+    .timeline .timeline__checkpoint{
+        width: 100%;
+        transform: none;
+        padding-left: 0;
+        padding-right: 0;
+        border: none;
+    }
+    .timeline .timeline__checkpoint::before{
+        width: 3px;
+        height: 4em;
+        top: -2em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .timeline .timeline__checkpoint:first-child::before{
+        width: 0px;
+        height: 0px;
+    }
+}
+
+@media only screen and (max-width:1240px) and (orientation: landscape){
+    $vyska-hlavicky: 60px;
+
+    .menu__list--mobile{
+        width: 100vw;
+        max-height: 70vh;
+        padding: 5px;
+    }
+    .menu__list--mobile .menu__item{
+        padding: 0px;
+    }
+    .homepage__picture-wrapper{
+        height: auto;
+        margin-top: $vyska-hlavicky;
+    }
+    
+}
+
+@media only screen and (max-width:900px) {
+    #mobilni-menu{
+        width: 90vw;
+        margin-top: 10px;
+    }
+    .homepage-title{
+        font-size: 50px;
+    }
+    .homepage-subtitle{
+        font-size: 30px;
+    }
+    .picture__add-info{
+        font-size: 24px;
+    }
+    .picture__widgets-wapper{
+        gap: 10px;
+    }
+    .section__title{
+        font-size: 35px;
+    }
+    .menu__link--main{
+        padding: 10px;
+    }
+    .widget{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: $widget-background-color;
+        position: relative;
+    }
+    .widget__odpocitavadlo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    }
+    .picture__add-info{
+        font-size: 25px;
+    }
+    .decoration img{
+        width: 20%;
+    }
+    .basic-widget-info__widget{
+        padding: 10px;
+        font-size: 16px;
+        width: 95%;
+    }
+
+    .dary__qr-platba-wrapper{
+        width: 90%;
+    }
+
+    .dary__seznam{
+        display: grid;
+        grid-template-columns: 100% ;
+        grid-column-gap: 20px;
+        grid-row-gap: 40px;
+    }
+
+    .rezervace-sekce__img{
+        width: 400px;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+    
+    .rezervace-sekce__img img{
+        object-fit: cover;
+    }
+    .rezervace__formular{
+        width: 90vw;
+    }
+    .kontaktni-info{
+        flex-direction: column;
+        width: 80%;
+        align-content: center;
+        margin: auto;
+        flex-wrap: wrap;
+    }
+    .kontakt-email, .kontakt-tel{
+        width: 100%;
+    }
+    .footer{
+        padding: 15px;
+    }
+    .footer__jmena-snoubencu-heading{
+        font-size: 24px;
+    }
+    .footer__datum-svatby{
+        padding-top: 20px;
+        font-size: 20px;
+    }
+    .footer__contact-widgets{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .contact-widgets__tel, .contact-widgets__email{
+        padding: 20px;
+        width: 100%;
+    }
+    @media only screen and (max-width:550px){
+        .homepage-title{
+            font-size: 40px;
+        }
+        .homepage-subtitle{
+            font-size: 22px;
+        }
+
+        .widget{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: $widget-background-color;
+            position: relative;
+        }
+        .widget__odpocitavadlo{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 25px;
+        }
+        .picture__add-info{
+            font-size: 20px;
+        }
+        .menu__link{
+            font-size: 20px;
+        }
+        .rezervace-sekce__img{
+            width: 300px;
+            height: 200px;
+        }
+        .footer__contact-widgets i{
+            padding: 10px 50px;
+            background-color: white;
+            border-radius: 10px;
+            color: $dark-green;
+        }
+        
+        $text-font-size: 24px;
+        $small-text-font-size: 20px;
+
+    }
+
+}

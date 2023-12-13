@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montaga&family=Poppins:wght@300;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/images/favicon.png">e
+    <script src="https://kit.fontawesome.com/455227364c.js" crossorigin="anonymous" defer></script>
+    <title>Potvrdit účast</title>
+</head>
+<body>
+   <header class="header">
+        <nav class="header__menu">
+            <div class="header__logo"><a href="/index/#uvod" class="menu__link">Pospíšilovi</a></div>
+            <ul class="menu__list">
+                <li class="menu__item" ><a href="/index/#uvod" class="menu__link menu__link--main" id="uvod-link">Úvod</a></li>
+                <li class="menu__item"><a href="/index/#harmonogram" class="menu__link menu__link--main">Harmonogram</a></li>
+                <li class="menu__item"><a href="/index/#mista" class="menu__link menu__link--main">Místa</a></li>
+                <li class="menu__item"><a href="/index/#dary" class="menu__link menu__link--main">Dary</a></li>
+                <li class="menu__cta-potvrzeni-ucasti"><a href="/potvrdit-ucast/" class="menu__link">Potvrzení účasti</a></li>
+            </ul>
+        </nav>
+        <nav class="header__menu--mobile">
+            <div class="header__logo"><a href="/index/#uvod" class="menu__link">Pospíšilovi</a></div>
+            <div class="hamburger-menu">
+                   <div class="hamburger-icon hamburger-icon--close hide" for="hamburger-icon"><i class="fa-solid fa-xmark"></i></div> 
+                   <div class="hamburger-icon hamburger-icon--open show" for="hamburger-icon"><i class="fa-solid fa-bars"></i></div> 
+            </div>        
+        </nav>
+        <ul class="menu__list menu__list--mobile" id="mobilni-menu">
+                        <li class="menu__item" ><a href="/index/#uvod" class="menu__link menu__link--main" id="uvod-link">Úvod</a></li>
+                        <li class="menu__item"><a href="/index/#harmonogram" class="menu__link menu__link--main">Harmonogram</a></li>
+                        <li class="menu__item"><a href="/index/#mista" class="menu__link menu__link--main">Místa</a></li>
+                        <li class="menu__item"><a href="/index/#dary" class="menu__link menu__link--main">Dary</a></li>
+                        <li class="menu__cta-potvrzeni-ucasti"><a href="/potvrdit-ucast/" class="menu__link">Potvrzení účasti</a></li>
+        </ul>
+   </header>
+
+    <main class="main">
+        <section class="potvrzeni-ucasti__section" >
+        <div class="decoration decoration--top-left">
+            <img src="/images/růže horní.png" alt="svatební dekorace">
+        </div>
+        <h1 class="section__title" >Potvrzení účasti</h1>
+        <div class="potvrzeni-ucasti__form-wrapper">
+            <form action="" class="potvrzeni-ucasti__formular">
+                <label for="cele-jmeno">Celé jméno</label>
+                <input class="input" type="text" name="cele-jmeno" id="cele-jmeno">
+                <label for="email">Email</label>
+                <input class="input" class="input" type="email" name="email" id="email">
+
+                <p class="form-text" >Zúčastním se:<p>
+                <div class="radio-btn__polozka">
+                    <input class="radio-input"  type="radio" name="zucastnim-se" id="jen-obradu" value="Jen obřadu">
+                    <label class="label" for="jen-obradu">Jen obřadu</label>
+                  
+                </div>
+                
+                <div class="radio-btn__polozka">              
+                    <input  class="radio-input" type="radio" name="zucastnim-se" id="obradu-a-hostiny" value="Obřadu a hostiny">
+                    <label class="label" for="obradu-a-hostiny">Obřadu a hostiny</label>
+                </div>
+                <div class="radio-btn__polozka">
+                    <input class="radio-input"  type="radio" name="zucastnim-se" id="nezucastnim-se" value="Nezúčastním se">
+                    <label class="label" for="nezucastnim-se">Nezúčastním se</label>
+                </div>
+
+                <p class="form-text">K obědu si přeji:</p>
+                <div class="radio-btn__polozka">
+                    <input class="radio-input"  type="radio" name="obed" id="svickova" value="svickovou">
+                    <label for="svickova">Svíčkovou</label>
+                </div>
+
+                <div class="radio-btn__polozka">
+                    <input  class="radio-input" type="radio" name="obed" id="testoviny" value="svickovou">
+                    <label for="testoviny">Těstoviny</label>
+                </div>
+
+                <div class="radio-btn__polozka">
+                    <input class="radio-input"  type="radio" name="obed" id="nebudu-jist" value="svickovou">
+                    <label class="label" for="nebudu-jist">Nebudu jíst</label>
+                </div>
+
+
+                <div class="radio-btn__polozka">
+                    <input  class="radio-input" type="radio" name="obed" id="mam-alergii" value="svickovou">
+                    <label class="label" for="mam-alergii">Mám alergii</label>
+                </div>
+
+                <input class="input input__alergie" type="text" name="alergie" id="alergie" placeholder="Mám alergii na:">
+
+                <label class="form-text" for="poznamka">Poznámka</label>
+                <textarea class="input" name="poznamka" id="poznamka" cols="30" rows="10"></textarea>
+               
+                <a  class="form-btn" href="/dekujeme-za-potvrzeni-ucasti/">Odeslat</a>
+            </form>
+        </div>
+
+        <div class="info-blok">
+            <h3 class="info-blok__title">Jak postupovat pro potvrzení více osob?</h3>
+            <p class="info-blok__text">Pokud chcete rezervovat své děti, partnera nebo jakoukoliv další osobu, tak prosím pro každého vyplňte tento dotazník, Jakmile odešlete rezervaci pro jednu osobu, bude vám nabídnuto, abyste rezervovali účast další osobě. Můžete použít jeden email pro rezervování celé rodiny.</p>
+        </div>
+
+        <div class="decoration decoration--bottom-right">
+            <img src="/images/růže dolní.png" alt="">
+        </div>
+    </section>
+
+
+    </main>
+
+      <footer class="footer">
+        <div class="footer__jmena-snoubencu">
+            <h3 class="footer__jmena-snoubencu-heading">Monika a Roman Pospíšilovi</h3> 
+            <h3 class="footer__datum-svatby">Svatba 17.7.2023</h3>
+            <div class="footer__contact-widgets">
+                <div class="contact-widgets__tel"><a href="mailto: snoubenci@seznam.cz"><i class="fa-regular fa-envelope"></i></a><p>snoubenci@seznam.cz</p></div>
+                <div class="contact-widgets__email">
+                    <a href="tel:+420123456"><i class="fa-solid fa-phone"></i></a><p>tel: +420 123 456</p>
+                </div>
+            </div>
+            <p class="footer__copyright">&copy; Copyright 2023</p>
+        </div>
+   </footer>
+
+<script src="/js/script.js"></script>
+</body>
+</html> 
